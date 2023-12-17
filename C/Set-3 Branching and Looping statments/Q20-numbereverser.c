@@ -14,6 +14,9 @@ void main(){
     printf("The reverse of %d is %d",num,ans);
 
     }
+
+
+    
 // -----------------------------------------------------------------------------------------------
 //Less efficient solution below
 /*

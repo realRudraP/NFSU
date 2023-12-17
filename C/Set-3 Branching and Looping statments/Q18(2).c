@@ -1,4 +1,14 @@
 #include<stdio.h>
+/*
+Final output for 5 rows:
+
+ 1  2  3  4  5 
+  1  2  3  4 
+   1  2  3 
+    1  2 
+     1
+
+*/
 void main(){
     int n;
     printf("Enter the number of rows: ");
@@ -8,7 +18,7 @@ void main(){
             printf(" ");
         }
         for(int k=1;k<=n-i;k++){
-            printf(" %d ",n-i);
+            printf(" %d ",k);
         }
         printf("\n");
     }

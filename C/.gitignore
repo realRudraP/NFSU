@@ -4,3 +4,4 @@
 # Ignore executables
 *.exe
 *.h
+*.json

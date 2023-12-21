@@ -7,12 +7,11 @@ void main(){
     struct personal peop[5];
     for(int i=0;i<5;i++){
         printf("Enter the name of employee %d: ",i+1);
-        gets(peop[i].name);
+        scanf("%s",peop[i].name);
         printf("Enter the Date of Joining of employee %d: ",i+1);
-        gets(peop[i].doj);
+        scanf("%s",peop[i].doj);
         printf("Enter the salary of employee %d: ",i+1);
         scanf("%d",&peop[i].salary);
-        fflush(stdin);
     }
     printf("Completed gathering information. Now printing output\n \n\n");
     for(int i=0;i<5;i++){

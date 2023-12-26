@@ -1,22 +1,23 @@
 #include<stdio.h>
-void prime(int n);
+int prime(int n);
 void main(){
-     int in;
+     int in,stat;
      printf("Please enter the number which you want to check: ");
      scanf("%d",&in);
-     prime(in);
+     stat=prime(in);
+     printf("Prime status=%d",stat);
 }
-void prime(int n){
+int prime(int n){
     int res=1;
     if(n<=1){
         res=0;
     }else{
-        for(int i=2;i<+(n/2);i++){
+        for(int i=2;i<=(n/2);i++){
             if(n%i==0){
                 res=0;
                 break;
             }
         }
         }
-        printf("Prime Status: %d",res);
+    return res;
     }

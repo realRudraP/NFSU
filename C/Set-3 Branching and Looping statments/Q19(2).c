@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 /*
 Final Output for 5 rows:
 
@@ -9,18 +9,20 @@ ABCD
 ABCDE
 
 */
-void main(){
+void main()
+{
     int n;
-    char ch='A';
+    char ch = 'A';
     printf("Enter the number of rows: ");
-    scanf("%d",&n);
-    for(int i=0;i<=n;i++)
-    { ch='A';
-        for(int j=i;j>0;j--){
-            printf( "%c" ,ch);
+    scanf("%d", &n);
+    for (int i = 0; i <= n; i++)
+    {
+        ch = 'A';
+        for (int j = i; j > 0; j--)
+        {
+            printf("%c", ch);
             ch++;
         }
         printf("\n");
     }
-    }
-
+}

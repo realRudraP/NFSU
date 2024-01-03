@@ -1,4 +1,10 @@
 #include<stdio.h>
+/*
+IMPORTANT (for C practical file)
+You should skip the part in which the number of inputs is being taken from the user
+as the question explicitly states 10 inputs.
+Also, replace n with 10 everywhere.
+*/
 void main(){
     int n;
     printf("How many numbers do you want to enter? ");
@@ -10,14 +16,14 @@ void main(){
     }
      for(int i=0; i<n;i++){
         if(in[i]%2==0){
-            static int count=0;
-            eve[count]=in[i];
-            count++;
+            static int counte=0;
+            eve[counte]=in[i];
+            counte++;
             eve_c++;
         }else{
-            static int count=0;
-            od[count]=in[i];
-            count++;
+            static int counto=0;
+            od[counto]=in[i];
+            counto++;
             odd_c++;
         }
     }
@@ -26,7 +32,7 @@ void main(){
         printf("%d, ",eve[i]);
     }
     printf("\n");
-     printf("Even values are: ");
+     printf("Odd values are: ");
     for(int i=0;i<odd_c;i++){
         printf("%d, ",od[i]);
     }

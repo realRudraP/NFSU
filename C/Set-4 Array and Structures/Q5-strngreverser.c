@@ -1,7 +1,7 @@
 #include<string.h>
 #include <stdio.h>
 
-int main() {
+void main() {
     char txt [20];
     printf("Enter your text: ");
     scanf("%s",txt);
@@ -13,5 +13,4 @@ int main() {
         txt[n-i-1]=temp;
     }
     printf("%s",txt);
-    return 0;
 }

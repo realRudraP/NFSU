@@ -42,6 +42,7 @@ void bitwise(){
     cout<<"Y>>2 = "<<(y>>2)<<endl;
     cout<<"~X = "<<(~x)<<endl;
     }
+
 int main(){
     int choice;
     do{

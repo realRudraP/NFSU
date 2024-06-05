@@ -1,8 +1,80 @@
 #include<iostream>
 using namespace std;
+void leftAlignedTriagle(int rows, char c){
+            cout<<"Left aligned triangle"<<endl;
+            for(int i=1;i<=rows;i++){
+                for(int s=i;s>0;s--){
+                    cout<<c;
+                }
+                cout<<endl;
+            }
+    }
+void rightAlignedTraingle(int rows,char c){
+    cout<<"Right aligned triangle"<<endl;
+    for(int i=1;i<=rows;i++){
+        for(int spaces=rows-i;spaces>0;spaces--){
+            cout<<" ";
+        }
+        for(int stars=i;stars>0;stars--){
+            cout<<c;
+        }
+        cout<<endl;
 
+    }
+}
+
+void pyramid(int rows, char c){
+    cout<<"Pyramid"<<endl;
+    for(int i=1;i<=rows;i++){
+        for(int spaces=rows-i;spaces>0;spaces--){
+        cout<<" ";
+    }
+    for(int stars=i;stars>0;stars--){
+        cout<<c<<" ";
+    }
+    cout<<endl;
+    }
+}
+
+void mirroredLeftTriangle(int rows, char c){
+     cout<<"Mirrored Left Aligned Triangle"<<endl;
+
+        for(int i=rows;i>0;i--){
+            for(int s=i;s>0;s--){
+                cout<<c;
+            }
+            cout<<endl;
+        }
+    }
+void mirroredRightTriangle(int rows, char c){
+    cout<<"Mirrored Right Aligned Triangle"<<endl;
+
+            for(int i=rows;i>0;i--){
+            for(int spaces=rows-i;spaces>0;spaces--){
+                cout<<" ";
+            }
+            for(int stars=i;stars>0;stars--){
+                cout<<c;
+            }
+            cout<<endl;
+            }
+    }
+void mirroredPyramid(int rows,char c){
+     cout<<"Mirrored Pyramid"<<endl;
+
+    for(int i=rows;i>0;i--){
+        for(int spaces=rows-i;spaces>0;spaces--){
+        cout<<" ";
+    }
+    for(int stars=i;stars>0;stars--){
+        cout<<c<<" ";
+    }
+    cout<<endl;
+    }
+}
 int main(){
     int cho,rows;
+    char ch;
     do{
         cout<<"Pattern Printer"<<endl;
         cout<<"1. Left aligned triangle"<<endl;
@@ -11,100 +83,36 @@ int main(){
         cout<<"4. Mirrored left aligned triangle"<<endl;
         cout<<"5. Mirrored right aligned triangle"<<endl;
         cout<<"6. Mirrored Pyramid"<<endl;
-        cout<<"7. Quit"<<endl;
+        cout<<"0. Quit"<<endl;
         cout<<"Enter your choice: ";
         cin>>cho;
+        if(cho!=0){
+        cout<<"How many rows do you want to print?: ";
+        cin>>rows;
+        cout<<"Which character do you want to use?: ";
+        cin>>ch;
+        }
         switch(cho){
-        case 1:{
-            cout<<"Left aligned triangle"<<endl;
-            cout<<"How many rows do you want to print: ";
-            cin>>rows;
-            for(int i=1;i<=rows;i++){
-                for(int s=i;s>0;s--){
-                    cout<<"*";
-                }
-                cout<<endl;
-            }
-            }
+        case 1:
+            leftAlignedTriagle(rows,ch);
             break;
         case 2:
-            {
-
-            cout<<"Right aligned triangle"<<endl;
-            cout<<"How many rows do you want to print: ";
-            cin>>rows;
-            for(int i=1;i<=rows;i++){
-                for(int spaces=rows-i;spaces>0;spaces--){
-                    cout<<" ";
-                }
-                for(int stars=i;stars>0;stars--){
-                    cout<<"*";
-                }
-                cout<<endl;
-
-            }
-            }
+            rightAlignedTraingle(rows,ch);
             break;
         case 3:
-            {
-                cout<<"Pyramid"<<endl;
-                cout<<"How many rows do you want to print: ";
-                cin>>rows;
-                for(int i=1;i<=rows;i++){
-                    for(int spaces=rows-i;spaces>0;spaces--){
-                    cout<<" ";
-                }
-                for(int stars=i;stars>0;stars--){
-                    cout<<"* ";
-                }
-                cout<<endl;
-                }
-            }
+            pyramid(rows,ch);
             break;
         case 4:
-            {
-                cout<<"Mirrored Left Aligned Triangle"<<endl;
-                cout<<"How many rows do you want to print: ";
-                cin>>rows;
-                for(int i=rows;i>0;i--){
-                for(int s=i;s>0;s--){
-                    cout<<"*";
-                }
-                cout<<endl;
-            }
-            }
+            mirroredLeftTriangle(rows,ch);
             break;
         case 5:
             {
-                cout<<"Mirrored Right Aligned Triangle"<<endl;
-                cout<<"How many rows do you want to print: ";
-                cin>>rows;
-                for(int i=rows;i>0;i--){
-                for(int spaces=rows-i;spaces>0;spaces--){
-                    cout<<" ";
-                }
-                for(int stars=i;stars>0;stars--){
-                    cout<<"*";
-                }
-                cout<<endl;
-                }
+                mirroredRightTriangle(rows,ch);
             }
             break;
         case 6:
             {
-                cout<<"Mirrored Pyramid"<<endl;
-                cout<<"How many rows do you want to print: ";
-                cin>>rows;
-                for(int i=rows;i>0;i--){
-                    for(int spaces=rows-i;spaces>0;spaces--){
-                    cout<<" ";
-                }
-                for(int stars=i;stars>0;stars--){
-                    cout<<"* ";
-                }
-                cout<<endl;
-                }
-
+                mirroredPyramid(rows,ch);
             }
             break;
         case 0:

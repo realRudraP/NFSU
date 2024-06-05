@@ -6,6 +6,7 @@ class Obj{
     string name;
     float unit_price,qty;
 }o[100];
+
 int main(){
     int bill_no,prods=0,choice=1;
     cout << "Enter Bill Number : ";

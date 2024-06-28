@@ -1,7 +1,9 @@
+
 #include<iostream>
 using namespace std;
 
 int gcd(int a,int b){
+    a=abs(a),b=abs(b);
     if(a<b){
         int temp=a;
         a=b;
